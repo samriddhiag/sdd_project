@@ -1,0 +1,368 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Coaching Inst VIET</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header style="color: rgb(65, 118, 144);"-->
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><h2>Coaching VIET</h2></div>
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+                                    <li><a href="http://127.0.0.1:8000/hostel">Hostels</a></li>
+									<li><a href="accounts/about">About us</a></li>
+									{% if user.is_authenticated %}
+									<li><a href="accounts/send_req">Send Requests</a></li>
+									<li><a href="accounts/logout">Logout</a></li>
+									{% else %}
+									<li class="active"><a href="accounts/register">Home</a></li>
+									<li><a href="accounts/register">Register</a></li>
+									<li><a href="accounts/login">Login</a></li>
+									{% endif %}
+									
+								</ul>
+							</nav>
+							
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="{% static '#' %}"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="{% static '#' %}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="{% static '#' %}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="{% static '#' %}"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="{% static '#'' %}"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="{% static '#' %}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+			<div class="menu_logo"><a href="{% static 'index.html' %}">Coaching VIET</a></div>
+			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+		</div>
+		<div class="menu_content">
+			<ul>
+				<li><a href="{% static 'inex.html' %}">Home</a></li>
+				<li><a href="{% static 'about.html' %}">About us</a></li>
+				<li><a href="{% static '#' %}">Services</a></li>
+				<li><a href="{% static 'news.html' %}">News</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="{% static '#' %}"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="{% static '#' %}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="{% static '#' %}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="{% static '#' %}"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="{% static '#' %}"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="{% static '#' %}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		
+		<!-- Home Slider -->
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+				
+				<!-- Slide -->
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url(https://ak.picdn.net/shutterstock/videos/24256985/thumb/1.jpg)"></div>
+					<div class="home_slider_content_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_slider_content">
+										<div class="home_title"><h2 style="background-color: rgb(0, 0, 0, 0.2); border-radius: 2px; padding-left:8px;"> Come to Learn, Go to Serve</h2><h4 style="background-color: rgb(0, 0, 0, 0.8);color: white; border-radius: 2px; padding-left:8px;">Coaching institutes are gaining increase prominence in India’s secondary and tertiary education systems as our population continues to skyrocket with limited investment in education.
+											Parents and their children are more determined than ever to enrol in extra-curricular centres of education to gain a competitive edge over other aspirants.
+											Well managed coaching centres such as ours that provides several services streamlined into a single database for students to access, are therefore the way for the future.</h4></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			 
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url(static/images/bg_try2.jpeg)"></div>
+					<div class="home_slider_content_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_slider_content">
+										<div class="home_title"><h2>Come to Learn, Go to Serve</h2></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				 Slide 
+				<div class="owl-item">
+					<div class="background_image" style="background-image:url(static/images/bg_try2.jpeg)"></div>
+					<div class="home_slider_content_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_slider_content">
+										<div class="home_title"><h2>Come to Learn, Go to Serve</h2></div>
+		
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="home_page_nav" style="margin-top: -2in;">
+				<ul class="d-flex flex-column align-items-end justify-content-end">
+				<li><a href="{% static '#' %}" data-scroll-to="#destinations">Students<span>01</span></a></li>
+				<li><a href="{% static '#' %}" data-scroll-to="#news">Newsletter<span>02</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Intro -->
+
+	<div class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="intro_container">
+						<div class="row">
+
+							<!-- Intro Item -->
+							<div class="col-lg-4 intro_col">
+								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+									<div class="intro_icon"><img src="{% static 'images/contract.svg' %}" alt=""></div>
+									<div class="intro_content">
+										<div class="intro_title">Weekly tests</div>
+										<div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Intro Item -->
+							<div class="col-lg-4 intro_col">
+								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+									<div class="intro_icon"><img src="{% static 'images/save-money.svg' %}" alt=""></div>
+									<div class="intro_content">
+										<div class="intro_title">Scolarships</div>
+										<div class="intro_subtitle"><p>Sollicitudin mauris lobortis in.</p></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Intro Item -->
+							<div class="col-lg-4 intro_col">
+								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+									<div class="intro_icon"><img src="{% static 'images/teacher.svg' %}" alt=""></div>
+									<div class="intro_content">
+										<div class="intro_title">Spl. Mentors</div>
+										<div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<!-- Destinations -->
+
+	<div class="destinations" id="destinations">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">Check out the list of enrolled students</div>
+					<div class="section_title"><h2>Students database</h2></div>
+				</div>
+			</div>
+			<div class="row destinations_row">
+				<div class="col">
+					<div class="destinations_container item_grid">
+					
+						{% for dest in dests %}
+						<div class="destination item">
+							<div class="destination_image">
+								<img src="{{dest.img.url}}" alt="">
+							</div>
+							<div class="destination_content">
+								<h2>Roll num : {{dest.roll_no}}</h2>
+								<p>First name : {{dest.first_name}}</p>
+								<p>Middle name : {{dest.middle_name}}</p>
+								<p>Last name : {{dest.last_name}}</p>
+								<p>DOB : {{dest.dob}}</p>
+								<p>Age : {{dest.age}}</p>
+								<p>Street : {{dest.street}}</p>
+								<p>City : {{dest.city}}</p>
+								<p>State : {{dest.state}}</p>
+								<p>Pincode : {{dest.pincode}}</p>
+								<p>Gender : {{dest.gender}}</p>
+								<p>Phone no. : {{dest.phone_no}}</p>
+								<p>Email : {{dest.email}}</p>
+								<p>Physics JEE marks : {{dest.physics}}</p>
+								<p>Chemistry JEE marks : {{dest.chemistry}}</p>
+								<p>Maths JEE marks : {{dest.mathe}}</p>
+								<p>All India Rank : {{dest.air}}</p>
+								<p>Total marks(out of 500): {{dest.total_m}}</p>
+								<p>Batch name : {{dest.bname}}</p>
+								<p>Batch fees : {{dest.fees}}</p>
+								<p>Class timings : {{dest.class_tim}}</p>
+								<p>Alloted uniform num : {{dest.uni_num}}</p>
+								<p>Uniform color : {{dest.color}}</p>
+								<p>Uniform size avb : {{dest.size_avb}}</p>
+								<p>Hostel block name : {{dest.block_h}}</p>
+								<p>Room num : {{dest.room_no}}</p>
+								<p>Hostel type : {{dest.hos_type}}</p>
+								<p>Distance(in km) : {{dest.distance_km}}</p>
+								<p>Gender type : {{dest.gender_std}}</p>
+								<p>Alloted canteen id : {{dest.can_id}}</p>
+								<p>Canteen type : {{dest.can_type}}</p>
+								<p>Breakfast timings : {{dest.b_timings}}</p>
+								<p>Lunch timings : {{dest.l_timings}}</p>
+								<p>Dinner timings : {{dest.d_timings}}</p>
+								<p>Vehicle id : {{dest.tran_id}}</p>
+								<p>Vehicle type : {{dest.tran_type}}</p>
+								<p>Route taken : {{dest.route}}</p>
+								<p>Library id : {{dest.lib_id}}</p>
+								<p>Books issued(passed due date) : {{dest.book_iss}}</p>
+								<p>Books returned : {{dest.book_ret}}</p>
+								<p>Library fine : {{dest.fine}}</p>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+
+	<div class="news" id="news">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-8">
+					<div class="news_container"> 
+						
+						<!-- News Post -->
+						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+							<div class="news_post_image"><img src="{% static 'images/toppers.jpg' %}" alt=""></div>
+							<div class="news_post_content">
+								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+									<div>02</div>
+									<div>Aug</div>
+								</div>
+								<div class="news_post_title"><a href="{% static '#' %}">JEE Mains Top 10</a></div>
+								<div class="news_post_category">
+									<ul>
+										<li><a href="{% static '#' %}">Studying strategy</a></li>
+									</ul>
+								</div>
+								<div class="news_post_text">
+									<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- News Post -->
+						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+							<div class="news_post_image"><img src="{% static 'images/topperadv.jpg' %}" alt=""></div>
+							<div class="news_post_content">
+								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+									<div>27</div>
+									<div>Sept</div>
+								</div>
+								<div class="news_post_title"><a href="{% static '#' %}">Excelled in Advanced!!</a></div>
+								<div class="news_post_category">
+									<ul>
+										<li><a href="{% static '#' %}">Topper's letter</a></li>
+									</ul>
+								</div>
+								<div class="news_post_text">
+									<p>Tempor massa et laoreet malesuada. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- News Post -->
+						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
+							<div class="news_post_image"><img src="{% static 'images/iitpal.jpg' %}" alt=""></div>
+							<div class="news_post_content">
+								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+									<div>16</div>
+									<div>Oct</div>
+								</div>
+								<div class="news_post_title"><a href="{% static '#' %}">3700+ students in IITs</a></div>
+								<div class="news_post_category">
+									<ul>
+										<li><a href="{% static '#' %}">Ideal lifestyle</a></li>
+									</ul>
+								</div>
+								<div class="news_post_text">
+									<p>Vivamus massa.Tempor massa et laoreet malesuada. Aliquam nulla nisl, accumsan sit amet mattis.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'plugins/Isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js' %}"></script>
+<script src="{% static 'plugins/easing/easing.js' %}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

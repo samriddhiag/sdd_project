@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostels</title>
+</head>
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6mG7EAPGnfYU2eLkuSClySwoq56GvGQ2EUg&usqp=CAU);background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+    <!-- hostels -->
+			<div class="destinations" id="destinations">
+				<div class="container">
+					<div class="row">
+						<div class="col text-center">
+							<div class="section_title"><h2>Hostel database</h2></div>
+						</div>
+					</div>
+					<div class="row destinations_row">
+						<div class="col">
+							<div class="destinations_container item_grid">
+								<!-- Destination -->
+								{% for host in hosts %}
+								<div class="destination item">
+									<div class="destination_image">
+										<img src="{{host.img.url}}" alt="">
+									</div>
+									<div class="destination_content">
+										<h2>Hostel ID: {{host.hostel_id}}</h2>
+								<p>Hostel Name: {{host.hostel_name}}</p>
+								<p>Owner name : {{host.owner_name}}</p>
+								<p>Hostel address : {{host.hostel_address}}</p>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+</body>
+</html>
